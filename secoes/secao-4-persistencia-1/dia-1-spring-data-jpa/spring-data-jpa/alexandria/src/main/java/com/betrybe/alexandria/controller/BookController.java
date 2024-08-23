@@ -11,6 +11,7 @@ import com.betrybe.alexandria.service.exception.BookDetailNotFoundException;
 import com.betrybe.alexandria.service.exception.BookNotFoundException;
 import com.betrybe.alexandria.service.exception.PublisherNotFoundException;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,6 +30,7 @@ public class BookController {
 
   private final BookService bookService;
 
+  @Autowired
   public BookController(BookService bookService) {
     this.bookService = bookService;
   }
